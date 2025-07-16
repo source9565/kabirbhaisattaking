@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KABIR BHAI SATTA KING</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background: url('https://static.vecteezy.com/system/resources/thumbnails/051/167/728/small_2x/the-football-stadium-is-empty-during-the-day-clean-grass-no-markings-copy-space-horizontal-format-photo.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            padding: 20px;
+        }
+
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 0;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .logo-container {
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #FFD700;
+            margin: 0 auto;
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
+        }
+
+        .brand-name {
+            font-size: 2.5rem;
+            margin-top: 15px;
+            color: #FFD700;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+        }
+
+        .subscribers {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            color: white;
+        }
+
+        .blessing {
+            font-size: 1.5rem;
+            margin: 15px 0;
+            color: #FFD700;
+            font-style: italic;
+        }
+
+        .timer-container {
+            margin: 25px 0;
+            padding: 15px;
+            background-color: rgba(255, 215, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        .timer {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #FFD700;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            margin: 20px auto;
+            padding: 15px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            color: #000;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.5s forwards;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 215, 0, 0.5);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .brand-name {
+                font-size: 2rem;
+            }
+            
+            .logo {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .timer {
+                font-size: 2rem;
+            }
+            
+            .btn {
+                font-size: 1rem;
+                padding: 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .brand-name {
+                font-size: 1.8rem;
+            }
+            
+            .logo {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .blessing {
+                font-size: 1.2rem;
+            }
+            
+            .timer {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="logo.jpg" alt="KABIR BHAI SATTA KING Logo" class="logo">
+            <h1 class="brand-name">KABIR BHAI SATTA KING</h1>
+        </div>
+        
+        <div class="subscribers">1,693 subscribers</div>
+        
+        <div class="blessing">जय शनि देव 🙏 जय माँ काली</div>
+        
+        <a href="https://t.me/+ZY6U0PF4m6c3YjFl" class="btn" style="animation-delay: 0.2s">Join [KABIR BHAI SATTA KING] Channel</a>
+
+        <div class="timer-container">
+            <div class="timer" id="timer">60</div>
+        </div>
+        
+    </div>
+
+    <script>
+        // 60-second countdown timer
+        function startTimer(duration, display) {
+            let timer = duration;
+            const interval = setInterval(function () {
+                display.textContent = timer;
+                
+                // Change color when timer is low
+                if (timer <= 10) {
+                    display.style.color = '#FF0000';
+                    display.style.textShadow = '0 0 10px rgba(255, 0, 0, 0.7)';
+                }
+                
+                if (--timer < 0) {
+                    clearInterval(interval);
+                    display.textContent = "00";
+                    // You can add action when timer ends
+                }
+            }, 1000);
+        }
+        
+        // Initialize when page loads
+        window.onload = function () {
+            const sixtySeconds = 60;
+            const display = document.querySelector('#timer');
+            startTimer(sixtySeconds, display);
+            
+            // Button hover effects
+            const btn = document.querySelector('.btn');
+            btn.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.boxShadow = '0 10px 20px rgba(255, 215, 0, 0.5)';
+            });
+            
+            btn.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = 'none';
+            });
+        };
+    </script>
+</body>
+</html>
